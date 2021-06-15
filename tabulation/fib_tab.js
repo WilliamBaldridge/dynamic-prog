@@ -1,4 +1,6 @@
 // Tabulation uses a table: iteratively with table / an array
+// O(n) time
+// O(n) space
 
 const fib = (n) => {
 
@@ -14,6 +16,8 @@ const fib = (n) => {
 
     return table[n];
 };
+
+
 
 console.log(fib(6)); // 8
 console.log(fib(7)); // 13
