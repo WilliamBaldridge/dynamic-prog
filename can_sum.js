@@ -1,4 +1,7 @@
 // canSum(targetSum, numbers) brute force
+//  O(n^m) time
+//  O(m) space
+
 // const canSum = (targetSum, numbers) => {
 
 //     if (targetSum === 0) return true;
@@ -15,7 +18,10 @@
 // };
 
 
-// canSum memoization
+// canSum with memoization
+//  O(m * n) time - still has to branch for each n nodes
+//  O(m) space
+
 const canSum = (targetSum, numbers, memo = {}) => {
 
     if(targetSum in memo) return memo[targetSum];
