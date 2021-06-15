@@ -27,7 +27,9 @@
 //     return shortestCombo;
 // }
 
-
+// memoized
+// O(m^2 * n)
+// O(m^2)
 const bestSum = (targetSum, numbers, memo = {}) => {
 
     if (targetSum in memo) return memo[targetSum];
