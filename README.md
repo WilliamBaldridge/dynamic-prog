@@ -1,2 +1,3 @@
 # dynamic-prog
-# dynammic-prog
+
+Learning fib and memoization
