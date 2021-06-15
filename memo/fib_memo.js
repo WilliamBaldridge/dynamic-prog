@@ -1,3 +1,5 @@
+// Memoization is iterative, recursive tree
+
 // innefficient standard fib
 // const fib = (n) => {
 //     if (n <= 2) return 1;
