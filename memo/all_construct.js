@@ -27,7 +27,8 @@
 
 
 // memoized
-
+// ~O(n^m) time
+// ~O(n^m) space
 const allConstruct = (target, wordBank, memo = {}) => {
 
     if (target in memo) return memo[target];
@@ -41,7 +42,7 @@ const allConstruct = (target, wordBank, memo = {}) => {
 
             const suffix = target.slice(word.length)
             const suffixWays = allConstruct(suffix, wordBank, memo);
-            const targetWays = suffixWays.map(way => [ word, ...way ])
+            const targetWays = suffixWays.map(way => [ word, ...way ]);
             result.push(...targetWays); // spread again to avoid creating 3d array instead of 2d because push will nest the new array
         }
     }
