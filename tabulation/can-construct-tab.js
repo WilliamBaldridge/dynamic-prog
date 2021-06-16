@@ -1,6 +1,6 @@
 // m = target
 // n = wordBank.length
-// O(n * m^2) time
+// O(m^2 * n) time
 // O(m^2) space
 
 const canConstruct = (target, wordBank) => {
