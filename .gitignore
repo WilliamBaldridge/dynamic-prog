@@ -1,2 +1,7 @@
 .vscode/
 .DS_Store
+.idea/*
+*.iml
+
+*.class
+out/*
