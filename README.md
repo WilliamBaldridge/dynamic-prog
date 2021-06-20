@@ -29,7 +29,7 @@ Examples:
 -      Linear i = 0; while i < n do i += 1;
 -      Quadratic for (int i = 0; i < n; i += 1) { for (int j = 0; j < n; j += 1) {
   f(n) = n * n = n^2, O(f(n)) = O(n^2)
-
+- Multiply loops, outer by inner, dominant n term is time used
 
 
 
