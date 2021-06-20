@@ -1,6 +1,6 @@
 package datastructs;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class Array {
 
@@ -25,36 +25,24 @@ public class Array {
 
      */
 
-    private int [] arr;
-    private int len = 0;
-    private int capacity = 0;
-
-    public Array(int[] arr) {
-        this.arr = arr;
-    }
-
-    public Array(int capacity) {
-        if (capacity < 0) throw new IllegalArgumentException("Illegal capacity: " + capacity);
-        this.capacity = capacity;
-        arr = new int[capacity];
-    }
-
-    public static int[] add(int[] arr, int capacity) {
-
-        int[] extendedArray = Arrays.copyOf(arr, arr.length + 1);
-
-        extendedArray[extendedArray.length - 1] = capacity;
-
-        return extendedArray;
-    }
 
 
     public static void main(String[] args) {
 
-        int[] arr = new int[10];
-        System.out.println(arr.length);
-        Array.add(arr, 2);
-        System.out.println(arr.length);
+
+        List<Integer> arr = new ArrayList<>();
+        arr.add(1);
+        System.out.println(arr);
+        arr.add(10);
+        System.out.println(arr);
+
+        List<Integer> arr2 = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6));
+        System.out.println(arr2);
+        arr2.remove(3);
+        System.out.println(arr2);
+
+
+
     }
 
 
