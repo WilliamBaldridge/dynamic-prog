@@ -3,7 +3,7 @@ package datastructs;
 import java.util.Arrays;
 import java.util.LinkedList;
 
-public class LinkedLists {
+public class LinkedListStructs {
 
     // Singly Linked List (SLL) & Doubly linked list (DLL)
 

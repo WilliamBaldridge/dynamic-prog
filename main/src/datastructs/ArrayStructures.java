@@ -2,7 +2,7 @@ package datastructs;
 
 import java.util.*;
 
-public class Array {
+public class ArrayStructures {
 
     // A static array is a fixed length container containing n elements indexable from [0, n-1]
 
