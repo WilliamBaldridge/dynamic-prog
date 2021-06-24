@@ -11,11 +11,13 @@ public class BinaryHeap <T extends Comparable<T>> {
         this(1);
     }
 
+
     public BinaryHeap(int size) {
 
         heap = new ArrayList<>(size);
     }
 
+    // Priority queue construction, O(n)
     public BinaryHeap(T[] elements) {
 
         int heapSize = elements.length;
@@ -40,17 +42,22 @@ public class BinaryHeap <T extends Comparable<T>> {
         return heap.size();
     }
 
+    // Returns the value of the element with the lowest
+    // priority in this priority queue. If the priority
+    // queue is empty null is returned.
     public T peek() {
 
         if (isEmpty()) return null;
         return heap.get(0);
     }
 
+    // Removes the root of the heap, O(log(n))
     public T poll() {
 
-        return heap.removeAt(0);
+        return removeAt(0);
     }
 
+    // Test if an element is in heap, O(n)
     public boolean contains(T element) {
 
         for (int i = 0; i < size(); i++) {
@@ -59,6 +66,8 @@ public class BinaryHeap <T extends Comparable<T>> {
         return false;
     }
 
+    // Adds an element to the priority queue, the
+    // element must not be null, O(log(n))
     public void add(T element) {
 
         if (element == null) throw new IllegalArgumentException();
@@ -69,6 +78,8 @@ public class BinaryHeap <T extends Comparable<T>> {
         swim(indexOfLastElement);
     }
 
+    // Tests if the value of node i <= node j
+    // This method assumes i & j are valid indices, O(1)
     private boolean less(int i, int j) {
 
         T node1 = heap.get(i);
@@ -77,16 +88,21 @@ public class BinaryHeap <T extends Comparable<T>> {
         return node1.compareTo(node2) <= 0;
     }
 
+    // Perform bottom up node swim, O(log(n))
     private void swim(int k) {
 
+        // Grab the index of the next parent node WRT to k
         int parent = (k - 1) / 2;
 
         while (k > 0 && less(k, parent)) {
             swap(parent, k);
             k = parent;
+
+            parent = (k - 1) / 2;
         }
     }
 
+    // Top down node sink, O(log(n))
     private void sink(int k) {
 
         int heapSize = size();

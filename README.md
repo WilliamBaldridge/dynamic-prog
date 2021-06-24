@@ -4,6 +4,11 @@ Learning fib and memoization
 
 - JS and Java
 
+Data Structures
+
+- https://www.youtube.com/watch?v=RBSGKlAvoiM
+- https://github.com/williamfiset/Algorithms
+
 # BigO Notation
 
 Measuring efficiency:
