@@ -252,7 +252,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
             case PRE_ORDER -> preOrderTraversal();
             case IN_ORDER -> inOrderTraversal();
             case POST_ORDER -> postOrderTraversal();
-            case LEVEL_ORDER -> levelOrderTraversal();
+            case LEVEL_ORDER -> levelOrderTraversal(); // is a breadth first search
             default -> null;
         };
     }
@@ -367,6 +367,8 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
     // Returns as iterator to traverse the tree in level order
+    // Breadth First Search
+    // iteratively done using a Queue
     private java.util.Iterator<T> levelOrderTraversal() {
 
         final int expectedNodeCount = nodeCount;
